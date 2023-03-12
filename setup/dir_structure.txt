@@ -1,0 +1,33 @@
+├── LICENSE
+    ├── Makefile           <- Makefile with commands like 'make environment' or 'make requirement'
+    ├── README.md          <- The top-level README for developers using this project.
+    ├── data
+    │   ├── metadata       <- Excel and csv files with additional metadata
+    │   ├── interim        <- Intermediate data that has been transformed.
+    │   ├── predicted      <- Model predictions, will be used for the evaluations
+    │   └── raw            <- The original, immutable data dump.
+    │
+    ├── notebooks          <- Jupyter notebooks. Interaction with and orchestration of your Python modules in src/
+    │   ├── Dataset        <- call the dataset helper functions, analyze the datasets
+    │   ├── Evaluate       <- Evaluate the model performance, create plots
+    │   ├── Predict        <- Load a config and the corresponding trained models
+    │   |                     Apply the trained models on the test/validation splits
+    │   ├── Train          <- Define the experimental hyperparameters, train a new model
+    │   └── Test_IO        <- IO tests
+    │   └── Test_Models    <- Tensorflow functional or subclassing tests
+    │
+    ├── exp            <- Experiments with the following structure: groupname/experimentname/timestemp/"all experiment specific files"
+    │   ├── config        <- Experiment config files as json
+    │   ├── figures        <- Generated graphics and figures to be used in reporting
+    │   ├── model        <- Trained and serialized models, model predictions, or model summaries
+    │   └── tensorboard_logs  <- Generated graphics and figures to be used in reporting
+    │
+    ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
+    │                         generated with `pip freeze > requirements.txt`
+    │
+    ├── setup.py           <- Makes project pip installable (pip install -e .) so src can be imported
+    ├── src                <- Helper functions that will be used by the notebooks.
+        ├── data           <- create, preprocess and extract the nrrd files
+        ├── models         <- Modelzoo, Modelutils and Tensorflow layers
+        ├── utils          <- Metrics, callbacks, io-utils, notebook imports
+        └── visualization  <- Plots for the data, generator or evaluations
